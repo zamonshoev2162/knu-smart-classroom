@@ -7,20 +7,19 @@ document.addEventListener('click', (e) => {
   const menuIcon = targetElement.closest('.menu__icon');
   const gotoElement = targetElement.closest('[data-goto]');
 
-  if (menuIcon || gotoElement) {
+  if (menuIcon) {
     document.documentElement.classList.toggle('menu-open');
   }
 
   if (gotoElement) {
+    document.documentElement.classList.remove('menu-open');
     const goTo = gotoElement.dataset.goto;
     const goToElement = document.querySelector(goTo);
 
-    if (goToElement) {
-      window.scrollTo({
-        top: goToElement.offsetTop - header.offsetHeight,
-        behavior: 'smooth',
-      });
-    }
+    window.scrollTo({
+      top: goToElement.offsetTop - header.offsetHeight,
+      behavior: 'smooth',
+    });
     e.preventDefault();
   }
 });
