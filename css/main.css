@@ -225,6 +225,41 @@ body {
   .itc__text {font-size: 16px;}
 }
 
+/* ========== TEAM ITC SECTION STYLES ========== */
+.team {padding: 100px 0 45px;background: url(../img/team-bg.jpg) center/cover no-repeat fixed;}
+.team__title {
+  font-size: 52px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 25px;
+  color: #18181b;
+}
+.team__cards {display: grid;grid-template-columns: repeat(4, 1fr);gap: 25px;}
+.team__item {
+  min-height: 180px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 5px;
+  padding: 25px 15px;
+  background-color: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(8px);
+  transition: all 0.35s;
+}
+.team__item:nth-child(odd) {border-radius: 25px 25px 75px;}
+.team__item:nth-child(even) {border-radius: 75px 25px 25px;}
+.team__item img {width: 50%;border-radius: 75px;}
+.team__item:hover {background-color: #18181b;}
+.team__item:hover {transform: scale(0.9);}
+h3.team__title {font-size: 22px;margin-bottom: 0;color: #fff;}
+.team__sub-title {font-weight: 700;}
+@media (max-width: 997.98px) {
+  .team__cards {grid-template-columns: repeat(2, 1fr);}
+}
+@media (max-width: 551.98px) {
+  .team__cards {grid-template-columns: auto;}
+}
+
 /* ========== FOOTER STYLES ========== */
 .footer {padding: 10px 0;background-color: #18181b;}
 .footer__container {
