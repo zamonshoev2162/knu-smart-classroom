@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>KNU - Smart classroom</title>
     <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="css/main.css" />
+
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
   </head>
@@ -35,8 +37,8 @@
                   </a>
                 </li>
                 <li>
-                  <a data-goto=".employees" href="#" class="menu__link">
-                    Employees ITC
+                  <a data-goto=".team" href="#" class="menu__link">
+                    Team ITC
                   </a>
                 </li>
                 <li>
@@ -68,9 +70,40 @@
 						</div>
 					</div>
 				</section>
-        <section class="smartclass"></section>
+        <section class="smartclass">
+					<div class="smartclass__container">
+						<div class="smartclass__content">
+							<h2 class="smartclass__title">About smart classroom</h2>
+							<div class="smartclass__text">
+								<p>
+									With the assistance of Kyrgyz-Chinese faculty in May 2022 was signed a quadripartite cooperation agreement between KNU named after J. Balasagyn, Southern University of Science and Technology, UNESCO - ICHEI and Guangzhou CreativeView Education Technology Co.
+								</p>
+								<p>
+									Within the framework of the signed document in the walls of KNU began the implementation of the project "Smart Classroom" (Smart Classroom) - a unique educational program that gives the opportunity to improve learning processes by applying the best educational practices and modern technologies.
+								</p>
+								<p>
+									The Smart Classroom project is also an educational platform that brings together the best higher education institutions in Africa and the Asia-Pacific region.
+								</p>
+							</div>
+						</div>
+						<div class="swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="img/slider/01.jpg" alt="Slide image">
+                </div>
+                <div class="swiper-slide">
+                  <img src="img/slider/02.jpg" alt="Slide image">
+                </div>
+                <div class="swiper-slide">
+                  <img src="img/slider/03.jpg" alt="Slide image">
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+					</div>
+				</section>
         <section class="itc"></section>
-        <section class="employees"></section>
+        <section class="team"></section>
         <section class="contacts"></section>
       </main>
       <footer class="footer">
@@ -79,12 +112,13 @@
             <div>&copy; 2024 KNU All rights reserved.</div>
             <div>
               Designed by
-              <a href="https://github.com/zamonshoev2162">Zamonshoev2162</a>
+              <a href="https://github.com/zamonshoev2162" target="_blank">Zamonshoev2162</a>
             </div>
           </div>
         </footer>
       </footer>
     </div>
+    <script src="js/swiper-bundle.min.js.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

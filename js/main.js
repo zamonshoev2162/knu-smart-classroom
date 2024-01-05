@@ -23,3 +23,15 @@ document.addEventListener('click', (e) => {
     e.preventDefault();
   }
 });
+
+const swiper = new Swiper('.swiper', {
+  loop: true,
+  spaceBetween: 20,
+  speed: 1500,
+  autoplay: true,
+  pagination: {
+    el: '.swiper-pagination',
+    type: 'bullets',
+    clickable: true,
+  },
+});
