@@ -10,7 +10,7 @@ body {
   font-size: 18px;
   line-height: 1.5;
   background-color: #27282d;
-  color: #fff;
+  color: #d3d3d3;
 }
 .wrapper {min-height: 100%;overflow: clip;display: flex;flex-direction: column;}
 [class*='__container'] {max-width: 1300px;margin: 0 auto;padding: 0 15px;}
@@ -47,6 +47,7 @@ body {
   flex-wrap: wrap;
   gap: 10px 15px;
 }
+.menu__link {color: #fff;}
 .menu__link::after {
   content: '';
   width: 0;
@@ -125,7 +126,7 @@ body {
   inset: 0;
   background-color: rgba(0, 0, 0, 0.2);
 }
-.home__container {max-width: 950px;position: relative;}
+.home__container {max-width: 950px;position: relative;color: #fff;}
 .home__title {
   font-size: 52px;
   font-weight: 700;
@@ -161,7 +162,7 @@ body {
 }
 
 /* ========== SMART CLASS SECTION STYLES ========== */
-.smartclass {min-height: 100vh;padding: 80px 0 45px;}
+.smartclass {padding: 100px 0 45px;}
 .smartclass__container {
   display: flex;
   align-items: center;
@@ -171,7 +172,12 @@ body {
 
 }
 .smartclass__content {flex: 0 0 44%;}
-.smartclass__title {font-size: 48px;margin-bottom: 25px;}
+.smartclass__title {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #976838;
+}
 .smartclass__text {display: grid;gap: 10px;text-align: justify;}
 .swiper {height: 420px;flex: 0 1 48%;border-radius: 25px;}
 .swiper-slide,
@@ -190,6 +196,33 @@ body {
 }
 @media (max-width: 767.98px) {
   .smartclass__text {font-size: 16px;}
+}
+
+/* ========== ITC SECTION STYLES ========== */
+.itc {padding: 100px 0 45px;}
+.itc__title {
+  width: 44%;
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #976838;
+}
+.itc__text {display: grid;text-align: justify;gap: 10px;}
+@media (min-width: 998px) {
+  .itc__text > * {width: 44%;}
+  .itc__text >:nth-child(odd) {margin-left: 56%;}
+}
+@media (max-width: 997.98px) {
+  .itc__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .itc__title {width: auto;text-align: center;}
+}
+@media (max-width: 437.98px) {
+  .itc__title {font-size: 32px;}
+  .itc__text {font-size: 16px;}
 }
 
 /* ========== FOOTER STYLES ========== */
