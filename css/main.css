@@ -50,15 +50,17 @@ body {
   flex-wrap: wrap;
   gap: 10px 15px;
 }
-.menu__link::after {
-  content: '';
-  width: 0;
-  height: 1px;
-  display: flex;
-  background-color: currentColor;
-  transition: width 0.35s;
+@media (hover: hover) {
+  .menu__link::after {
+    content: '';
+    width: 0;
+    height: 1px;
+    display: flex;
+    background-color: currentColor;
+    transition: width 0.35s;
+  }
+  .menu__link:hover::after {width: 100%;}
 }
-.menu__link:hover::after {width: 100%;}
 .menu__icon {display: none;}
 @media (max-width: 767.98px) {
   .menu-open body {overflow: hidden;}
@@ -146,7 +148,9 @@ body {
   background-color:#27282d;
   transition: border 0.3s;
 }
-.home__button:hover {border-color: currentColor;}
+@media (hover: hover) {
+  .home__button:hover {border-color: currentColor;}
+}
 @media (max-width: 997.98px) {
   .home__container {max-width: fit-content;}
   .home__title {font-size: 38px;}
@@ -232,7 +236,9 @@ body {
 .team__item:nth-child(odd) {border-radius: 25px 25px 75px;}
 .team__item:nth-child(even) img,
 .team__item:nth-child(even) {border-radius: 75px 25px 25px;}
-.team__item:hover {transform: scale(0.9);background-color: #18181b;}
+@media (hover: hover) {
+  .team__item:hover {transform: scale(0.9);background-color: #18181b;}
+}
 h3.team__title {font-size: 22px;margin-bottom: 0;color: #fff;}
 .team__sub-title {font-weight: 700;}
 @media (max-width: 997.98px) {
@@ -256,15 +262,17 @@ h3.team__title {font-size: 22px;margin-bottom: 0;color: #fff;}
   gap: 15px;
 }
 .contacts__link {font-size: 14px;}
-.contacts__link::after {
-  content: '';
-  width: 0;
-  height: 1px;
-  display: flex;
-  background-color: currentColor;
-  transition: width 0.35s;
+@media (hover: hover) {
+  .contacts__link::after {
+    content: '';
+    width: 0;
+    height: 1px;
+    display: flex;
+    background-color: currentColor;
+    transition: width 0.35s;
+  }
+  .contacts__link:hover::after {width: 100%;}
 }
-.contacts__link:hover::after {width: 100%;}
 
 /* ========== FOOTER STYLES ========== */
 .footer {padding: 10px 0;background-color: #18181b;}
@@ -277,7 +285,9 @@ h3.team__title {font-size: 22px;margin-bottom: 0;color: #fff;}
   gap: 10px;
 }
 .footer a {color: #a1a1a1;}
-.footer a:hover {text-decoration: underline;}
+@media (hover: hover) {
+  .footer a:hover {text-decoration: underline;}
+}
 @media (max-width: 767.98px) {
   .footer__container {flex-direction: column;}
 }
