@@ -129,7 +129,14 @@ body {
   inset: 0;
   background-color: rgba(0, 0, 0, 0.2);
 }
-.home__container {max-width: 950px;position: relative;}
+.home__container {
+  max-width: 950px;
+  position: relative;
+  opacity: 0;
+  transform: translateY(65px);
+  transition: opacity 1s, transform 0.8s;
+}
+.home__container.show {opacity: 1;transform: translateY(0);}
 .home__title {
   font-size: 52px;
   font-weight: 700;
@@ -178,7 +185,15 @@ body {
 }
 .smartclass__content {flex: 0 0 44%;}
 .smartclass__text {display: grid;gap: 10px;text-align: justify;}
-.swiper {height: 420px;flex: 0 1 48%;border-radius: 25px;}
+.swiper {
+  height: 420px;
+  flex: 0 1 48%;
+  opacity: 0;
+  transform: translateX(100px);
+  border-radius: 25px;
+  transition: opacity 1s, transform 0.8s;
+}
+.swiper.show {opacity: 1;transform: translateX(0);}
 .swiper-slide,
 .swiper-slide img{
   width: 100%;
@@ -205,8 +220,16 @@ body {
 
 /* ========== ITC SECTION STYLES ========== */
 .itc {padding: 100px 0 45px;}
-.itc__title {width: 44%;}
+.itc__title {
+  width: 44%;
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity 1s, transform 1s;
+}
+.itc__title.show {opacity: 1;transform: scale(1);}
 .itc__text {display: grid;text-align: justify;gap: 10px;}
+.itc__text p {opacity: 0;transform: scale(0);transition: opacity 1s, transform 1s;}
+.itc__text p.show {opacity: 1;transform: scale(1);}
 @media (min-width: 998px) {
   .itc__text > * {width: 44%;}
   .itc__text >:nth-child(odd) {margin-left: 56%;}
@@ -229,9 +252,12 @@ body {
   place-items: center;
   gap: 5px;
   padding: 25px 0;
+  opacity: 0;
+  scale: 0.5;
   background-color: rgba(24, 24, 27, 0.9);
-  transition: all 0.35s;
+  transition: opacity 1s, scale 1s, transform 0.35s, background-color 0.35s;
 }
+.team__item.show {opacity: 1;scale: 1;}
 .team__item:nth-child(odd) img,
 .team__item:nth-child(odd) {border-radius: 25px 25px 75px;}
 .team__item:nth-child(even) img,

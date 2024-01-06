@@ -24,14 +24,20 @@ document.addEventListener('click', (e) => {
   }
 });
 
+const onEntry = (entry) =>
+  entry.forEach((change) =>
+    change.target.classList.toggle('show', change.isIntersecting)
+  );
+
+const observer = new IntersectionObserver(onEntry, { threshold: [0.5] });
+document
+  .querySelectorAll('.animation-element')
+  .forEach((el) => observer.observe(el));
+
 const swiper = new Swiper('.swiper', {
   loop: true,
   spaceBetween: 20,
   speed: 1500,
-  autoplay: true,
-  pagination: {
-    el: '.swiper-pagination',
-    type: 'bullets',
-    clickable: true,
-  },
+  autoplay: { delay: 1500 },
+  pagination: { el: '.swiper-pagination', clickable: true },
 });
